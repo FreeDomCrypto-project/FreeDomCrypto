@@ -57,7 +57,7 @@ public:
     , cryptonote::core_rpc_server* rpc_server = NULL
     );
 
-  bool chgdiff(const std::vector<std::int>& args);
+  bool chgdiff(const std::vector<std::string>);
 
   bool print_peer_list(const std::vector<std::string>& args);
 
