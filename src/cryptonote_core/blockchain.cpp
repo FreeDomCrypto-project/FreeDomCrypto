@@ -1531,7 +1531,7 @@ bool Blockchain::handle_alternative_block(const block& b, const crypto::hash& id
       bei.cumulative_difficulty = m_db->get_block_cumulative_difficulty(m_db->get_block_height(b.prev_id));
     }
   //  bei.cumulative_difficulty += current_diff;
-  bei.cumulative_difficulty == current_diff;
+  bei.cumulative_difficulty -= current_diff;
 
     // add block to alternate blocks storage,
     // as well as the current "alt chain" container
