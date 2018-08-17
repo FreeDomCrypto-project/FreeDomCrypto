@@ -163,17 +163,17 @@ namespace cryptonote
   {
     if (nettype == TESTNET)
     {
-  //    ADD_CHECKPOINT(0,     "48ca7cd3c8de5b6a4d53d2861fbdaedca141553559f9be9520068053cda8430b");
+
 
       return true;
     }
     if (nettype == STAGENET)
     {
-//      ADD_CHECKPOINT(0,       "76ee3cc98646292206cd3e86f74d88b4dcc1d937088645e9b0cbca84b7ce74eb");
+
 
       return true;
     }
-//    ADD_CHECKPOINT(1,     "771fbcd656ec1464d3a02ead5e18644030007a0fc664c0a964d30922821a8148");
+
 
     return true;
   }
@@ -219,22 +219,21 @@ namespace cryptonote
     std::vector<std::string> records;
 
     // All four FreeDomCryptoPulse domains have DNSSEC on and valid
-    static const std::vector<std::string> dns_urls = { "checkpoints.FreeDomCryptopulse.se"
-						     , "checkpoints.FreeDomCryptopulse.org"
-						     , "checkpoints.FreeDomCryptopulse.net"
-						     , "checkpoints.FreeDomCryptopulse.co"
+    static const std::vector<std::string> dns_urls = {  "fdomc1.freedomtoken.ca"
+             , "fdomc2.freedomtoken.ca"
+             , "fdomc3.freedomtoken.ca"
     };
 
     static const std::vector<std::string> testnet_dns_urls = { "testpoints.FreeDomCryptopulse.se"
-							     , "testpoints.FreeDomCryptopulse.org"
-							     , "testpoints.FreeDomCryptopulse.net"
-							     , "testpoints.FreeDomCryptopulse.co"
+    , "fdomc1.freedomtoken.ca"
+    , "fdomc2.freedomtoken.ca"
+    , "fdomc3.freedomtoken.ca"
     };
 
     static const std::vector<std::string> stagenet_dns_urls = { "stagenetpoints.FreeDomCryptopulse.se"
-                   , "stagenetpoints.FreeDomCryptopulse.org"
-                   , "stagenetpoints.FreeDomCryptopulse.net"
-                   , "stagenetpoints.FreeDomCryptopulse.co"
+                   , "fdomc1.freedomtoken.ca"
+                   , "fdomc2.freedomtoken.ca"
+                   , "fdomc3.freedomtoken.ca"
     };
 
     if (!tools::dns_utils::load_txt_records_from_dns(records, nettype == TESTNET ? testnet_dns_urls : nettype == STAGENET ? stagenet_dns_urls : dns_urls))
