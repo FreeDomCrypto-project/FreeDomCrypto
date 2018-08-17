@@ -876,7 +876,7 @@ if(next_difficulty(timestamps, difficulties, target) >= 6000){
   if(diff >= 10000){
       m_difficulty_for_next_block = 2000;
   }else{
-    if(diff >= 6000 & <= 8000){
+    if(diff >= 6000 & diff <= 8000){
         m_difficulty_for_next_block = 1500;
     }else{
         m_difficulty_for_next_block = diff;
