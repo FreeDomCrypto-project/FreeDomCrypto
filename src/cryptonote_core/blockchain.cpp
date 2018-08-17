@@ -884,7 +884,7 @@ if(next_difficulty(timestamps, difficulties, target) >= 6000){
     }
   }
 //  m_difficulty_for_next_block = diff;
-diff = m_difficulty_for_next_block;
+
   return diff;
 }
 //------------------------------------------------------------------
