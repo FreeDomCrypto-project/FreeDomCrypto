@@ -46,14 +46,7 @@ t_command_parser_executor::t_command_parser_executor(
   : m_executor(ip, port, login, is_rpc, rpc_server)
 {}
 
-bool t_command_parser_executor::chgdiff(const std::vector<std::string>)
-{if(!args.empty()) return false;
-
-diff = 10;
-return true;
-}
-
-
+  
 bool t_command_parser_executor::print_peer_list(const std::vector<std::string>& args)
 {
   if (!args.empty()) return false;

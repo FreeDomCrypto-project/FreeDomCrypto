@@ -51,13 +51,7 @@ t_command_server::t_command_server(
   , m_is_rpc(is_rpc)
 {
 
-m_command_lookup.set_handler(
-  "chgdiff"
-  ,std::bind(&t_command_server::chgdiff, this, p::_1)
-  , "chgdiff [<command]"
-  , "request to ajust difficulty"
-  
-);
+
 
   m_command_lookup.set_handler(
       "help"
