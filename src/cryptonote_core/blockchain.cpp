@@ -864,7 +864,12 @@ difficulty_type Blockchain::get_difficulty_for_next_block()
     m_difficulties = difficulties;
   }
   size_t target = get_difficulty_target();
+//  difficulty_type diff = next_difficulty(timestamps, difficulties, target);
+if(next_difficulty(timestamps, difficulties, target) >= 6000){
+  difficulty_type diff = 1000;
+}else{
   difficulty_type diff = next_difficulty(timestamps, difficulties, target);
+}
 
   CRITICAL_REGION_LOCAL1(m_difficulty_lock);
   m_difficulty_for_next_block_top_hash = top_hash;
@@ -1525,7 +1530,8 @@ bool Blockchain::handle_alternative_block(const block& b, const crypto::hash& id
       // passed-in block's previous block's cumulative difficulty, found on the main chain
       bei.cumulative_difficulty = m_db->get_block_cumulative_difficulty(m_db->get_block_height(b.prev_id));
     }
-    bei.cumulative_difficulty += current_diff;
+  //  bei.cumulative_difficulty += current_diff;
+  bei.cumulative_difficulty == current_diff;
 
     // add block to alternate blocks storage,
     // as well as the current "alt chain" container
