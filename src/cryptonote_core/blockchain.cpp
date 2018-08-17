@@ -864,7 +864,7 @@ difficulty_type Blockchain::get_difficulty_for_next_block()
     m_difficulties = difficulties;
   }
   size_t target = get_difficulty_target();
-//  difficulty_type diff = next_difficulty(timestamps, difficulties, target);
+ difficulty_type diff = next_difficulty(timestamps, difficulties, target);
 if(next_difficulty(timestamps, difficulties, target) >= 6000){
   difficulty_type diff = 1000;
 }else{
