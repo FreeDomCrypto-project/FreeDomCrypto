@@ -1,52 +1,7 @@
 # FreeDomCrypto
 
-Copyright (c) 2014-2018 The FreeDomCrypto Project.   
+Copyright (c) 2017-2018 The FreeDomCrypto Project.   
 Portions Copyright (c) 2012-2013 The Cryptonote developers.
-
-## Development resources
-
-- Web: [getFreeDomCrypto.org](https://getFreeDomCrypto.org)
-- Forum: [forum.getFreeDomCrypto.org](https://forum.getFreeDomCrypto.org)
-- Mail: [dev@getFreeDomCrypto.org](mailto:dev@getFreeDomCrypto.org)
-- GitHub: [https://github.com/FreeDomCrypto-project/FreeDomCrypto](https://github.com/FreeDomCrypto-project/FreeDomCrypto)
-- IRC: [#FreeDomCrypto-dev on Freenode](https://webchat.freenode.net/?randomnick=1&channels=%23FreeDomCrypto-dev&prompt=1&uio=d4)
-
-## Vulnerability response
-
-- Our [Vulnerability Response Process](https://github.com/FreeDomCrypto-project/meta/blob/master/VULNERABILITY_RESPONSE_PROCESS.md) encourages responsible disclosure
-- We are also available via [HackerOne](https://hackerone.com/FreeDomCrypto)
-
-## Announcements
-
-- You can subscribe to an [announcement listserv](https://lists.getFreeDomCrypto.org) to get critical announcements from the FreeDomCrypto core team. The announcement list can be very helpful for knowing when software updates are needed.
-
-## Build
-
-### IMPORTANT 
-
-These builds are of the master branch, which is used for active development and can be either unstable or incompatible with release software. Please compile release branches.
-
-| Operating System      | Processor | Status |
-| --------------------- | -------- |--------|
-| Ubuntu 16.04          |  i686    | [![Ubuntu 16.04 i686](https://build.getFreeDomCrypto.org/png?builder=FreeDomCrypto-static-ubuntu-i686)](https://build.getFreeDomCrypto.org/builders/FreeDomCrypto-static-ubuntu-i686)
-| Ubuntu 16.04          |  amd64   | [![Ubuntu 16.04 amd64](https://build.getFreeDomCrypto.org/png?builder=FreeDomCrypto-static-ubuntu-amd64)](https://build.getFreeDomCrypto.org/builders/FreeDomCrypto-static-ubuntu-amd64)
-| Ubuntu 16.04          |  armv7   | [![Ubuntu 16.04 armv7](https://build.getFreeDomCrypto.org/png?builder=FreeDomCrypto-static-ubuntu-arm7)](https://build.getFreeDomCrypto.org/builders/FreeDomCrypto-static-ubuntu-arm7)
-| Debian Stable         |  armv8   | [![Debian armv8](https://build.getFreeDomCrypto.org/png?builder=FreeDomCrypto-static-debian-armv8)](https://build.getFreeDomCrypto.org/builders/FreeDomCrypto-static-debian-armv8)
-| OSX 10.10             |  amd64   | [![OSX 10.10 amd64](https://build.getFreeDomCrypto.org/png?builder=FreeDomCrypto-static-osx-10.10)](https://build.getFreeDomCrypto.org/builders/FreeDomCrypto-static-osx-10.10)
-| OSX 10.11             |  amd64   | [![OSX 10.11 amd64](https://build.getFreeDomCrypto.org/png?builder=FreeDomCrypto-static-osx-10.11)](https://build.getFreeDomCrypto.org/builders/FreeDomCrypto-static-osx-10.11)
-| OSX 10.12             |  amd64   | [![OSX 10.12 amd64](https://build.getFreeDomCrypto.org/png?builder=FreeDomCrypto-static-osx-10.12)](https://build.getFreeDomCrypto.org/builders/FreeDomCrypto-static-osx-10.12)
-| FreeBSD 11            |  amd64   | [![FreeBSD 11 amd64](https://build.getFreeDomCrypto.org/png?builder=FreeDomCrypto-static-freebsd64)](https://build.getFreeDomCrypto.org/builders/FreeDomCrypto-static-freebsd64)
-| DragonFly BSD 4.6     |  amd64   | [![DragonFly BSD amd64](https://build.getFreeDomCrypto.org/png?builder=FreeDomCrypto-static-dragonflybsd-amd64)](https://build.getFreeDomCrypto.org/builders/FreeDomCrypto-static-dragonflybsd-amd64)
-| Windows (MSYS2/MinGW) |  i686    | [![Windows (MSYS2/MinGW) i686](https://build.getFreeDomCrypto.org/png?builder=FreeDomCrypto-static-win32)](https://build.getFreeDomCrypto.org/builders/FreeDomCrypto-static-win32)
-| Windows (MSYS2/MinGW) |  amd64   | [![Windows (MSYS2/MinGW) amd64](https://build.getFreeDomCrypto.org/png?builder=FreeDomCrypto-static-win64)](https://build.getFreeDomCrypto.org/builders/FreeDomCrypto-static-win64)
-
-## Coverage
-
-| Type      | Status |
-|-----------|--------|
-| Coverity  | [![Coverity Status](https://scan.coverity.com/projects/9657/badge.svg)](https://scan.coverity.com/projects/9657/)
-| Coveralls | [![Coveralls Status](https://coveralls.io/repos/github/FreeDomCrypto-project/FreeDomCrypto/badge.svg?branch=master)](https://coveralls.io/github/FreeDomCrypto-project/FreeDomCrypto?branch=master)
-| License   | [![License](https://img.shields.io/badge/license-BSD3-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
 ## Introduction
 
@@ -57,6 +12,9 @@ FreeDomCrypto is a private, secure, untraceable, decentralised digital currency.
 **Security:** Using the power of a distributed peer-to-peer consensus network, every transaction on the network is cryptographically secured. Individual wallets have a 25 word mnemonic seed that is only displayed once, and can be written down to backup the wallet. Wallet files are encrypted with a passphrase to ensure they are useless if stolen.
 
 **Untraceability:** By taking advantage of ring signatures, a special property of a certain type of cryptography, FreeDomCrypto is able to ensure that transactions are not only untraceable, but have an optional measure of ambiguity that ensures that transactions cannot easily be tied back to an individual user or computer.
+
+**Difficulty:** FreeDomCrypto is created in focus of Maintaining Low Difficulty While Striving the Quality and Stability of the coins core a major part of this code was to manage the difficulty rising to fast. FreeDomCrypto well allow people to mine with the lowest end of hardwear and still make profit. FreeDomCrypto Aims to fix the issue in the market of profitability due to the difficulty and demand rising, there well no-longer be a need for high end expensive hardwear to mine when all you realy need is a minimum spec device to mine and make a good profit. (FDOC) hops that other coins well adapt the low difficulty focaus, cryptocurrency well be #1 again.
+
 
 ## About this project
 
