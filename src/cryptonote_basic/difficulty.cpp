@@ -59,7 +59,7 @@ namespace cryptonote {
     // __int128 isn't part of the standard, so the previous function wasn't portable. mul128() in Windows is fine,
     // but this portable function should be used elsewhere. Credit for this function goes to latexi95.
 
-int resnum = 1;
+int resnum = 0;
 
 
     uint64_t aLow = a & 0xFFFFFFFF;
