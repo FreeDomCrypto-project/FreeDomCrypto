@@ -868,7 +868,8 @@ difficulty_type Blockchain::get_difficulty_for_next_block()
 if(next_difficulty(timestamps, difficulties, target) >= 2000){
   difficulty_type diff = 1;
 }else{
-  difficulty_type diff = next_difficulty(timestamps, difficulties, target);
+//  difficulty_type diff = next_difficulty(timestamps, difficulties, target);
+difficulty_type diff = 20;
 }
 
   CRITICAL_REGION_LOCAL1(m_difficulty_lock);
