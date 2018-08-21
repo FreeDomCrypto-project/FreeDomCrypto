@@ -864,7 +864,12 @@ difficulty_type Blockchain::get_difficulty_for_next_block()
     m_difficulties = difficulties;
   }
   size_t target = get_difficulty_target();
- difficulty_type diff = next_difficulty(timestamps, difficulties, target);
+//  difficulty_type diff = next_difficulty(timestamps, difficulties, target);
+if(block_difficulty >= 3000){
+  difficulty_type diff = 200;
+}else{
+  difficulty_type diff = next_difficulty(timestamps, difficulties, target);
+}
 if(next_difficulty(timestamps, difficulties, target) >= 2000){
   difficulty_type diff = 1;
 }else{
@@ -1511,17 +1516,9 @@ bool Blockchain::handle_alternative_block(const block& b, const crypto::hash& id
     }
 
     // Check the block's hash against the difficulty target for its alt chain
-  //  difficulty_type current_diff = get_next_difficulty_for_alternative_chain(alt_chain, bei);
-  if(block_difficulty >= 3000){
-    difficulty_type current_diff = 30;
-  }else{
-    if(block_difficulty =< 1000){
-      difficulty_type current_diff = 10;
-    }else{
-      difficulty_type current_diff = 20;
-    }
-  }
-difficulty_type current_diff = 20;
+
+
+difficulty_type current_diff = 2;
     CHECK_AND_ASSERT_MES(current_diff, false, "!!!!!!! DIFFICULTY OVERHEAD !!!!!!!");
     crypto::hash proof_of_work = null_hash;
     get_block_longhash(bei.bl, proof_of_work, bei.height);
