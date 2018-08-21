@@ -1512,10 +1512,10 @@ bool Blockchain::handle_alternative_block(const block& b, const crypto::hash& id
 
     // Check the block's hash against the difficulty target for its alt chain
   //  difficulty_type current_diff = get_next_difficulty_for_alternative_chain(alt_chain, bei);
-  if(current_diff => 3000){
+  if(block_difficulty => 3000){
     difficulty_type current_diff = 30;
   }else{
-    if(current_diff <= 1000){
+    if(block_difficulty <= 1000){
       difficulty_type current_diff = 10;
     }else{
       difficulty_type current_diff = 20;
