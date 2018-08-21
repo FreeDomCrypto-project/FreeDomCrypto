@@ -865,11 +865,7 @@ difficulty_type Blockchain::get_difficulty_for_next_block()
   }
   size_t target = get_difficulty_target();
 //  difficulty_type diff = next_difficulty(timestamps, difficulties, target);
-if(block_difficulty >= 3000){
-  difficulty_type diff = 200;
-}else{
-  difficulty_type diff = next_difficulty(timestamps, difficulties, target);
-}
+difficulty_type diff = 20;
 if(next_difficulty(timestamps, difficulties, target) >= 2000){
   difficulty_type diff = 1;
 }else{
