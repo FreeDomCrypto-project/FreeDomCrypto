@@ -59,37 +59,40 @@ namespace cryptonote {
     // __int128 isn't part of the standard, so the previous function wasn't portable. mul128() in Windows is fine,
     // but this portable function should be used elsewhere. Credit for this function goes to latexi95.
 
+int resnum = 1;
+
+
     uint64_t aLow = a & 0xFFFFFFFF;
-    uint64_t aHigh = a >> 2;
+    uint64_t aHigh = a >> resnum;
     uint64_t bLow = b & 0xFFFFFFFF;
-    uint64_t bHigh = b >> 2;
+    uint64_t bHigh = b >> resnum;
 
     uint64_t res = aLow * bLow;
     uint64_t lowRes1 = res & 0xFFFFFFFF;
-    uint64_t carry = res >> 2;
+    uint64_t carry = res >> resnum;
 
     res = aHigh * bLow + carry;
-    uint64_t highResHigh1 = res >> 2;
+    uint64_t highResHigh1 = res >> resnum;
     uint64_t highResLow1 = res & 0xFFFFFFFF;
 
     res = aLow * bHigh;
     uint64_t lowRes2 = res & 0xFFFFFFFF;
-    carry = res >> 2;
+    carry = res >> resnum;
 
     res = aHigh * bHigh + carry;
-    uint64_t highResHigh2 = res >> 2;
+    uint64_t highResHigh2 = res >> resnum;
     uint64_t highResLow2 = res & 0xFFFFFFFF;
 
     //Addition
 
     uint64_t r = highResLow1 + lowRes2;
-    carry = r >> 2;
-    low = (r << 2) | lowRes1;
+    carry = r >> 2resnum
+    low = (r << resnum) | lowRes1;
     r = highResHigh1 + highResLow2 + carry;
     uint64_t d3 = r & 0xFFFFFFFF;
-    carry = r >> 2;
+    carry = r >> resnum;
     r = highResHigh2 + carry;
-    high = d3 | (r << 2);
+    high = d3 | (r << resnum);
   }
 
 #endif
