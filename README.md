@@ -229,6 +229,8 @@ If you are using the older Raspbian Jessie image, compiling FreeDomCrypto is a b
 
 #### On Windows:
 
+!!!!MAY NOT WORK!!!
+
 Binaries for Windows are built on Windows using the MinGW toolchain within
 [MSYS2 environment](https://www.msys2.org). The MSYS2 environment emulates a
 POSIX system. The toolchain runs within the environment and *cross-compiles*
